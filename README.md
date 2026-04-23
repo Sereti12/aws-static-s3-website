@@ -146,3 +146,57 @@ Specifies the scope of the policy.
 <p align="center">
   <img src="output.png" alt="output" width="1000"/>
 </p>
+
+***Figure 6:*** *Successfully deployed a static website via bucket endpoint. Confirms the website is publicly accessible and functioning.*
+
+# **Security Considerations**
+
+* Public access is enabled strictly for static content delivery.
+* Bucket policy restricts access to read-only operations (s3:GetObject)
+* ACLs are disabled to ensure centralized and simplified access control.
+* Write and administrative actions are explicitly restricted, ensuring the bucket cannot be modified by external users.
+  
+# **Outcomes and skills demonstrated**
+
+This project demonstrates practical proficiency in the following:
+* S3 bucket provisioning and naming conventions.
+* Access control using bucket policies instead of ACLs.
+* Static website hosting configuration.
+* Writing and applying IAM policy JSON documents.
+* Object storage and content deployment in S3.
+  
+# **Key Lessons Learned**
+
+* Public access in S3 requires both Block Public Access Settings and bucket policies to be configured correctly.
+* ACLs are deprecated in favor of bucket policies for modern AWS environments.
+* S3 static website endpoints support HTTP only. HTTPS requires additional services. 
+# **Future Improvements.**
+
+* Enable versioning for data protection and recovery.
+* Implement logging and monitoring for access visibility.
+* Automate deployment through CI/CD pipelines
+
+# **Conclusion**
+
+This project demonstrates the ability to design, configure, and deploy a serverless static website on AWS using Amazon S3. It highlights practical skills in cloud storage, access control, and secure content delivery aligned with industry best practices. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
