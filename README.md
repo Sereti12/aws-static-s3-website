@@ -18,9 +18,10 @@ This solution utilizes a simple serverless architecture:
   <img src="Architecture.jpg" alt="Architecture Diagram" width="1000"/>
 </p>
 
-*Figure 1: Architecture of static website hosting using Amazon S3. This diagram demonstrates how client requests are served directly from the S3 endpoint.*
+***Figure 1:*** *Architecture of static website hosting using Amazon S3. This diagram demonstrates how client requests are served directly from the S3 endpoint.*
 
 # **Prerequisites**
+
 Before implementing this solution, the following requirements should be met:
 
 *	An active AWS account with access to the AWS management console. 
@@ -29,6 +30,7 @@ Before implementing this solution, the following requirements should be met:
 *	Static website files ready for deployment (e.g., index.html, CSS, JavaScript assets).
   
 # **Implementation**
+
 * A bucket was provisioned with the following configuration:
 *	Bucket type set to General Purpose
 * A globally unique bucket name is assigned. 
@@ -37,5 +39,19 @@ Before implementing this solution, the following requirements should be met:
 The above-mentioned configurations align with AWS best practices for simplified and secure permission control. 
 
 <p align="center">
-  <img src="Architecture.jpg" alt="Architecture Diagram" width="1000"/>
+  <img src="Bucket settings.png" alt="Bucket Settings Diagram" width="1000"/>
 </p>
+
+***Figure 2:*** *S3 bucket configuration with ACLs disabled. Shows the bucket setup with modern access control configurations applied.*
+
+# **Public Access Configuration**
+
+Public access settings were adjusted to support static website hosting:
+* Block Public Access is disabled. 
+* Access is restricted using a bucket policy granting read-only permissions. 
+This is important as it ensures that access is enabled, while limiting exposure to only necessary actions.
+
+<p align="center">
+  <img src="Bucket settings.png" alt="Bucket Settings Diagram" width="1000"/>
+</p>
+
