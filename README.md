@@ -35,3 +35,7 @@ Before implementing this solution, the following requirements should be met:
 * Access Control Lists (ACLs) were disabled to ensure centralized access management via the bucket policies.
   
 The above-mentioned configurations align with AWS best practices for simplified and secure permission control. 
+
+<p align="center">
+  <img src="Architecture.jpg" alt="Architecture Diagram" width="1000"/>
+</p>
