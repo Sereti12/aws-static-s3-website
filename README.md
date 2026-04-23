@@ -48,12 +48,25 @@ The above-mentioned configurations align with AWS best practices for simplified 
 
 Public access settings were adjusted to support static website hosting:
 * Block Public Access is disabled. 
-* Access is restricted using a bucket policy granting read-only permissions. 
+* Access is restricted using a bucket policy granting read-only permissions.
+  
 This is important as it ensures that access is enabled, while limiting exposure to only necessary actions.
 
 <p align="center">
   <img src="Block access.png" alt="Block access Diagram" width="1000"/>
 </p>
-*Figure 3: Public access settings configured for static website hosting. Public access is enabled in a controlled manner for content delivery.* 
+
+***Figure 3:*** *Public access settings configured for static website hosting, enabling controlled public read access for content delivery.* 
+
+# **Static Website Hosting Setup**
+Static website hosting was enabled on the bucket:
+*	Hosting feature activated
+*	Index document defined (index.html)
+  
+This allows the bucket to serve the web content over HTTP via the bucket website endpoint. 
+
+<p align="center">
+  <img src="Block access.png" alt="Block access Diagram" width="1000"/>
+</p>
 
 
