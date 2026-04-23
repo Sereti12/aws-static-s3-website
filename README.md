@@ -144,5 +144,5 @@ Specifies the scope of the policy.
 * Deployment validated by accessing the website via a browser. 
 
 <p align="center">
-  <img src="Static file.png" alt="Static file Diagram" width="1000"/>
+  <img src="output.png" alt="output" width="1000"/>
 </p>
