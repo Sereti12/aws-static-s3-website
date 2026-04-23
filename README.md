@@ -8,4 +8,4 @@ The implementation covers bucket provisioning, controlled public access, bucket 
 	<li>The bucket retrieves and serves the static content (HTML, CSS, JavaScript)</li>
   <li>Access is controlled via a bucket policy granting public read-only access</li>
 </ul>
-  ![alt text](image-path-or-url)
+  ![alt text](aws-static-s3-website/Architecture.jpg)
