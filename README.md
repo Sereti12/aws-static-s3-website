@@ -52,6 +52,8 @@ Public access settings were adjusted to support static website hosting:
 This is important as it ensures that access is enabled, while limiting exposure to only necessary actions.
 
 <p align="center">
-  <img src="Bucket settings.png" alt="Bucket Settings Diagram" width="1000"/>
+  <img src="Block access.png" alt="Block access Diagram" width="1000"/>
 </p>
+*Figure 3: Public access settings configured for static website hosting. Public access is enabled in a controlled manner for content delivery.* 
+
 
