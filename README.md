@@ -1,4 +1,6 @@
-# **Project Overview**
+# AWS S3 Static Website Hosting
+
+## Project Overview
 
 This project demonstrates hands-on experience in deploying a fully functional static website using an Amazon S3 bucket. The main objective is to implement a cost-effective, highly available, serverless hosting solution while applying appropriate access control and configuration best practices.
 
@@ -6,13 +8,15 @@ The implementation covers bucket provisioning, controlled public access, bucket 
 
 ---
 
-# **Architecture**
+## Architecture
 
 This solution utilizes a simple serverless architecture:
 
+* Amazon S3 stores static files (HTML, CSS, JS)
+* Public access is enabled via bucket policy
 * A client (web browser) sends a request to the S3 website endpoint  
 * The bucket retrieves and serves static content (HTML, CSS, JavaScript)  
-*  Access is controlled via a bucket policy granting public read-only access
+* Access is controlled via a bucket policy granting public read-only access
 
 <p align="center">
   <img src="Architecture.jpg" alt="Architecture Diagram" width="1000"/>
@@ -20,7 +24,7 @@ This solution utilizes a simple serverless architecture:
 
 ***Figure 1:*** *Architecture of static website hosting using Amazon S3. This diagram demonstrates how client requests are served directly from the S3 endpoint.*
 
-# **Prerequisites**
+## Prerequisites
 
 Before implementing this solution, the following requirements should be met:
 
@@ -29,7 +33,7 @@ Before implementing this solution, the following requirements should be met:
 *	Permissions that allow for the creation and configuration of bucket resources. 
 *	Static website files ready for deployment (e.g., index.html, CSS, JavaScript assets).
   
-# **Implementation**
+## Implementation
 
 * A bucket was provisioned with the following configuration:
 *	Bucket type set to General Purpose
@@ -44,7 +48,7 @@ The above-mentioned configurations align with AWS best practices for simplified 
 
 ***Figure 2:*** *S3 bucket configuration with ACLs disabled. Shows the bucket setup with modern access control configurations applied.*
 
-# **Public Access Configuration**
+## Public Access Configuration
 
 Public access settings were adjusted to support static website hosting:
 * Block Public Access is disabled. 
@@ -58,7 +62,7 @@ This is important as it ensures that access is enabled, while limiting exposure 
 
 ***Figure 3:*** *Public access settings configured for static website hosting, enabling controlled public read access for content delivery.* 
 
-# **Static Website Hosting Setup**
+## Static Website Hosting Setup
 Static website hosting was enabled on the bucket:
 *	Hosting feature activated
 *	Index document defined (index.html)
@@ -71,7 +75,7 @@ This allows the bucket to serve the web content over HTTP via the bucket website
 
 ***Figure 4:*** *Static website hosting enabled with an index document defined. This displays the configuration required for serving the web content.*
 
-# **Bucket Policy Configuration**
+## Bucket Policy Configuration
 * A bucket policy was configured to allow public read access.
 * Permission granted: s3:GetObject
 * The scope is limited to only objects within the bucket.
@@ -84,10 +88,7 @@ This allows the users to retrieve content without exposing write or administrati
 
 ***Figure 5:*** *Bucket policy granting public read access. Demonstrates controlled public access using a resource-based policy.*
 
-Here’s the policy extracted from the image:
-
-Here’s the policy extracted from the image:
-## **The Policy**
+## The Policy
 
 ```json
 {
@@ -149,14 +150,16 @@ Specifies the scope of the policy.
 
 ***Figure 6:*** *Successfully deployed a static website via bucket endpoint. Confirms the website is publicly accessible and functioning.*
 
-# **Security Considerations**
+## Security Considerations
 
 * Public access is enabled strictly for static content delivery.
 * Bucket policy restricts access to read-only operations (s3:GetObject)
 * ACLs are disabled to ensure centralized and simplified access control.
 * Write and administrative actions are explicitly restricted, ensuring the bucket cannot be modified by external users.
+* This setup allows public read access to all objects in the bucket.
+* This is suitable for static websites but should not be used for sensitive data. 
   
-# **Outcomes and skills demonstrated**
+## Outcomes and Skills Demonstrated
 
 This project demonstrates practical proficiency in the following:
 * S3 bucket provisioning and naming conventions.
@@ -165,18 +168,23 @@ This project demonstrates practical proficiency in the following:
 * Writing and applying IAM policy JSON documents.
 * Object storage and content deployment in S3.
   
-# **Key Lessons Learned**
+## Key Lessons Learned
 
 * Public access in S3 requires both Block Public Access Settings and bucket policies to be configured correctly.
 * ACLs are deprecated in favor of bucket policies for modern AWS environments.
-* S3 static website endpoints support HTTP only. HTTPS requires additional services. 
-# **Future Improvements.**
+* S3 static website endpoints support HTTP only.
+* HTTPS requires additional services.
+* S3 blocks public access by default
+* Bucket policies control external access
+* Static hosting requires both configuration and permissions
+  
+## Future Improvements
 
 * Enable versioning for data protection and recovery.
 * Implement logging and monitoring for access visibility.
 * Automate deployment through CI/CD pipelines
 
-# **Conclusion**
+## Conclusion
 
 This project demonstrates the ability to design, configure, and deploy a serverless static website on AWS using Amazon S3. It highlights practical skills in cloud storage, access control, and secure content delivery aligned with industry best practices. 
 
