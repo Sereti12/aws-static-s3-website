@@ -103,5 +103,46 @@ Here’s the policy extracted from the image:
   ]
 }
 ```
+#### Line-by-Line Breakdown
 
+- **Version**
 
+Specifies the policy language version used by AWS. The value "2012-10-17" is the standard and current version for IAM policies. 
+
+- **Statement**
+
+Contains one or more permission rules. In this case, a single statement defines the access control behavior. 
+
+- **Sid (Statement ID)**
+
+A unique identifier for the policy statement. It is optional and used for readability and management. 
+
+- **Effect**
+
+Defines whether the rule allows or denies access.
+
+In this policy, "Allow" grants permission to perform the specified action. 
+
+- **Principal**
+
+Specifies who the policy applies to.
+The value "*" means the rule applies to all users (public access). 
+
+- **Action**
+
+Defines the operation that is permitted.
+"s3:GetObject" allows users to retrieve (read/download) objects from the bucket. 
+
+- **Resource**
+
+Specifies the scope of the policy.
+"arn:aws:s3:::myfirststaticwebsite2026/*" applies the rule to all objects within the bucket.
+
+# **Deployment And Verification**
+* HTML, CSS, and supporting assets were uploaded to the bucket.
+* Website endpoint URL retrieved from the bucket properties.
+* Deployment validated by accessing the website via a browser. 
+
+<p align="center">
+  <img src="Static file.png" alt="Static file Diagram" width="1000"/>
+</p>
