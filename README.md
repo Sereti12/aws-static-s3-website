@@ -78,5 +78,30 @@ This allows the bucket to serve the web content over HTTP via the bucket website
   
 This allows the users to retrieve content without exposing write or administrative permissions. 
 
+<p align="center">
+  <img src="Policy.png" alt="Policy screenshot" width="1000"/>
+</p>
+
+***Figure 5:*** *Bucket policy granting public read access. Demonstrates controlled public access using a resource-based policy.*
+
+Here’s the policy extracted from the image:
+
+Here’s the policy extracted from the image:
+## **The Policy**
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::myfirststaticwebsite2026/*"
+    }
+  ]
+}
+```
 
 
