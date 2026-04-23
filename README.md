@@ -66,7 +66,17 @@ Static website hosting was enabled on the bucket:
 This allows the bucket to serve the web content over HTTP via the bucket website endpoint. 
 
 <p align="center">
-  <img src="Block access.png" alt="Block access Diagram" width="1000"/>
+  <img src="Static file.png" alt="Static file Diagram" width="1000"/>
 </p>
+
+***Figure 4:*** *Static website hosting enabled with an index document defined. This displays the configuration required for serving the web content.*
+
+# **Bucket Policy Configuration**
+* A bucket policy was configured to allow public read access.
+* Permission granted: s3:GetObject
+* The scope is limited to only objects within the bucket.
+  
+This allows the users to retrieve content without exposing write or administrative permissions. 
+
 
 
