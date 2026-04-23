@@ -7,5 +7,5 @@ The implementation covers bucket provisioning, controlled public access, bucket 
 	<li>A client (web-browser) sends a request to the bucket website endpoint</li>
 	<li>The bucket retrieves and serves the static content (HTML, CSS, JavaScript)</li>
   <li>Access is controlled via a bucket policy granting public read-only access</li>
-  ![Image](./images/image.png)
-  
+</ul>
+  ![Architecture](https://github.com/Sereti12/aws-static-s3-website/blob/700709bf618638ada9664cf050af84c5adbd2557/Architecture.jpg?raw=true)
