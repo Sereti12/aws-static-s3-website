@@ -187,24 +187,3 @@ This project demonstrates practical proficiency in the following:
 ## Conclusion
 
 This project demonstrates the ability to design, configure, and deploy a serverless static website on AWS using Amazon S3. It highlights practical skills in cloud storage, access control, and secure content delivery aligned with industry best practices. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
