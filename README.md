@@ -35,7 +35,7 @@ Before implementing this solution, the following requirements should be met:
   
 ## Implementation
 
-* A bucket was provisioned with the following configuration:
+ A bucket was provisioned with the following configuration:
 *	Bucket type set to General Purpose
 * A globally unique bucket name is assigned. 
 * Access Control Lists (ACLs) were disabled to ensure centralized access management via the bucket policies.
